@@ -10,8 +10,10 @@ import 'firebase/auth';
 
 import firebaseConnection from '../helpers/data/connection';
 
+import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 import Auth from '../components/pages/Auth/Auth';
 import Dashboard from '../components/pages/Dashboard/Dashboard';
+import Selections from '../components/pages/Selections/Selections';
 
 import './App.scss';
 
@@ -52,10 +54,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          { (authed) && <MyNavbar authed={authed} /> }
           <Switch>
             <PublicRoute path="/auth" exact component={Auth} authed={authed} />
             <PrivateRoute path="/" exact component={Dashboard} authed={authed} />
-            <PrivateRoute path="/selections" exact component={Dashboard} authed={authed} />
+            <PrivateRoute path="/selections" exact component={Selections} authed={authed} />
           </Switch>
         </Router>
       </div>
