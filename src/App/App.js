@@ -6,6 +6,9 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import Auth from '../components/pages/Auth/Auth';
+import Dashboard from '../components/pages/Dashboard/Dashboard';
+
 import './App.scss';
 
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
@@ -30,8 +33,9 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Switch>
-            <PublicRoute path="/auth" exact component={authed} authed={authed} />
-            <PrivateRoute path="/" exact component={authed} authed={authed} />
+            <PublicRoute path="/auth" exact component={Auth} authed={authed} />
+            <PrivateRoute path="/" exact component={Dashboard} authed={authed} />
+            <PrivateRoute path="/selections" exact component={Dashboard} authed={authed} />
           </Switch>
         </Router>
       </div>
