@@ -1,4 +1,7 @@
+@import '../../../styles/variables';
+
 .selections-header {
+  color: $whiteout;
   display: flex;
   justify-content: space-between;
   margin: 10px;

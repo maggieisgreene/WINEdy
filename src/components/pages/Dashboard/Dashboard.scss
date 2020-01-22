@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+.dash-header {
+  color: $whiteout;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.dash-container {
+  display: flex;
+}
+
+.minis-holder, .weekly-holder {
+  background-color: #f8f9fa;
+  border-radius: 3px;
+  color: $main;
+  height: 540px;
+  padding: 20px;
+}
