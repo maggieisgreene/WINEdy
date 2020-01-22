@@ -1,4 +1,24 @@
 {
+  "combinationONE": {
+    "wineID": "wineONE",
+    "candyID": "candyONE"
+  },
+  "combinationTWO": {
+    "wineID": "wineTWO",
+    "candyID": "candyTWO"
+  },
+  "combinationTHREE": {
+    "wineID": "wineTHREE",
+    "candyID": "candyFOUR"
+  },
+  "combinationFOUR": {
+    "wineID": "wineFOUR",
+    "candyID": "candyTHREE"
+  },
+  "combinationFIVE": {
+    "wineID": "wineSIX",
+    "candyID": "candyEIGHT"
+  },
   "combinationID": {
     "wineID": "",
     "candyID": ""

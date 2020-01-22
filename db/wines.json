@@ -1,10 +1,50 @@
 {
   "wineONE": {
-    "name": "",
-    "imageURL": "",
-    "region": "",
-    "year": "",
-    "winery": "",
-    "description": ""
+    "name": "Graci Etna Rosato",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/05/rose1.png",
+    "region": "Sicily",
+    "year": "2018",
+    "winery": "Graci",
+    "description": "Made from Nerello Mascalese, a dark-skinned red wine grape grown in Etna’s volcanic soil, this copper-colored rosato has the perfect balance of fruit, acid, and tannins. We loved the spiced berries on the nose, and the palate has satisfying acid with a lengthy finish."
+  },
+  "wineTWO": {
+    "name": "Château La Rame Bordeaux",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/05/rose2.png",
+    "region": "Bordeaux",
+    "year": "2018",
+    "winery": "Château La Rame",
+    "description": "From the banks of Bordeaux comes this super-savory, high-acid rosé with what we like to call “a really good concentration of flavor.” Translation? It smells vegetal and spicy (bell peppers, bonjour!), and tastes bright and zippy, like jalapeno-spiked melon."
+  },
+  "wineTHREE": {
+    "name": "Domaine De Cala Coteaux Varois En Provence",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/05/rose3.png",
+    "region": "Provencal",
+    "year": "2018",
+    "winery": "Domaine De Cala",
+    "description": "Ballet-pink and bone-dry, this classic Provencal rosé provides a lot of glamour for less than $20. Its floral, honeyed nose meets lime, peach, and pear flavors on the palate, and it’s tasty and accessible without sacrificing sophistication. Pair it with crudos, salads, and rolling fields of lavender."
+  },
+  "wineFOUR": {
+    "name": "Beckmen Vineyards Grenache Rosé",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/05/rose4.png",
+    "region": "Santa Barbara’s Santa Ynez Valley",
+    "year": "2018",
+    "winery": "Beckmen Vineyards",
+    "description": "A somewhat boozy, fruity nose, followed by lean and lovely structure. Its medium body and bright acid make it an excellent food wine at a reasonable price. You can drink any rosé by the pool, but this I would bring to dinner."
+  },
+  "wineFIVE": {
+    "name": "Inman Family Wines OGV Endless Crush Rosé",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/05/rose5.png",
+    "region": "Russian River Valley",
+    "year": "2018",
+    "winery": "Olivet Grange Vineyard",
+    "description": "The 2018 Endless Crush has lovely weight on the palate and not quite as much sweet fruit as the 2017. With higher acid and lower alcohol this aromatic rose is beautifully balanced. A crowd pleaser. Ripe watermelon, strawberries, and guava with lovely minerality and racy acidity to delight the palate."
+  },
+  "wineSIX": {
+    "name": "Château Montelena Napa Valley Chardonnay",
+    "imageURL": "https://static.vinepair.com/wp-content/uploads/2019/12/Chateau-Montelena-Napa-Valley-Chardonnay-2016.png",
+    "region": "Napa Valley",
+    "year": "2016",
+    "winery": "Château Montelena",
+    "description": "Elegance and power shine through in the grape’s mineral-driven flavors of fresh melon, apple, and honeysuckle. Meanwhile, careful and considered oak aging provides nutmeg notes and a soft, creamy texture. Buy this wine and raise a glass to the past, present, and future of Napa winemaking."
   }
 }
