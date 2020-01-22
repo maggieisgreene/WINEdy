@@ -1,0 +1,38 @@
+{
+  "candyONE": {
+    "name": "Skittles",
+    "imageURL": ""
+  },
+  "candyTWO": {
+    "name": "Snickers",
+    "imageURL": ""
+  },
+  "candyTHREE": {
+    "name": "Reese's",
+    "imageURL": ""
+  },
+  "candyFOUR": {
+    "name": "Starbursts",
+    "imageURL": ""
+  },
+  "candyFIVE": {
+    "name": "Swedish Fish",
+    "imageURL": ""
+  },
+  "candySIX": {
+    "name": "Dove Dark Chocolate",
+    "imageURL": ""
+  },
+  "candySEVEN": {
+    "name": "Sour Gummy Worms",
+    "imageURL": ""
+  },
+  "candyEIGHT": {
+    "name": "Twizzlers",
+    "imageURL": ""
+  },
+  "candyNINE": {
+    "name": "Sour Patch Kids",
+    "imageURL": ""
+  }
+}

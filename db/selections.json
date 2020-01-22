@@ -1,0 +1,22 @@
+{
+  "selectionONE": {
+    "combinationID": "combinationONE",
+    "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
+  },
+  "selectionTWO": {
+    "combinationID": "combinationTWO",
+    "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
+  },
+  "selectionTHREE": {
+    "combinationID": "combinationTHREE",
+    "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
+  },
+  "selectionFOUR": {
+    "combinationID": "combinationONE",
+    "UID": "12345"
+  },
+  "selectionFIVE": {
+    "combinationID": "combinationFIVE",
+    "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
+  }
+}

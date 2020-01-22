@@ -1,0 +1,26 @@
+{
+  "questionONE": {
+    "question": "Which one do you usually spring for?",
+    "candyOneID": "",
+    "candyTwoID": "",
+    "candyThreeID": ""
+  },
+  "questionTWO": {
+    "question": "Which of the following is your most preferred?",
+    "candyOneID": "",
+    "candyTwoID": "",
+    "candyThreeID": ""
+  },
+  "questionTHREE": {
+    "question": "Going to the movies and these are the options?",
+    "candyOneID": "",
+    "candyTwoID": "",
+    "candyThreeID": ""
+  },
+  "questionFOUR": {
+    "question": "Last but not least, most likely to opt for as dessert?",
+    "candyOneID": "",
+    "candyTwoID": "",
+    "candyThreeID": ""
+  }
+}
