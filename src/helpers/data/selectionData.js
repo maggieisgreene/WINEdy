@@ -17,4 +17,6 @@ const getSelectionsByUID = (UID) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getSelectionsByUID };
+const deleteSelection = (selectionID) => axios.delete(`${baseURL}/selections/${selectionID}.json`);
+
+export default { getSelectionsByUID, deleteSelection };

@@ -34,6 +34,12 @@ class Selections extends React.Component {
     this.getWinesBySelections();
   }
 
+  deleteSelection = (selectionID) => {
+    selectionData.deleteSelection(selectionID)
+      .then(() => this.getWinesBySelections())
+      .catch((ERR) => console.error('Error from delete selection!', ERR));
+  }
+
   render() {
     const { combinations, wines } = this.state;
 
@@ -44,7 +50,8 @@ class Selections extends React.Component {
           <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="boards d-flex flex-wrap">
-          {this.state.selections.map((selection) => <Selection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationID)} selection={selection} wines={wines} />)}
+          {this.state.selections.map((selection) => <Selection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationID)}
+            selection={selection} wines={wines} deleteSelection={this.deleteSelection} />)}
         </div>
       </div>
     );
