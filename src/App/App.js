@@ -14,6 +14,7 @@ import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 import Auth from '../components/pages/Auth/Auth';
 import Dashboard from '../components/pages/Dashboard/Dashboard';
 import Selections from '../components/pages/Selections/Selections';
+import Quiz from '../components/pages/Quiz/Quiz';
 
 import './App.scss';
 
@@ -59,6 +60,7 @@ class App extends React.Component {
             <PublicRoute path="/auth" exact component={Auth} authed={authed} />
             <PrivateRoute path="/" exact component={Dashboard} authed={authed} />
             <PrivateRoute path="/selections" exact component={Selections} authed={authed} />
+            <PrivateRoute path="/quiz" exact component={Quiz} authed={authed} />
           </Switch>
         </Router>
       </div>
