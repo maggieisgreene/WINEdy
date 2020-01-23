@@ -17,7 +17,7 @@ class Selection extends React.Component {
   render() {
     const { selection, combination, wines } = this.props;
 
-    const foundWine = wines.find((x) => x.id === combination.wineID);
+    const foundWine = wines.find((x) => x.id === combination.wineId);
 
     return (
       <div className="Selection col-3">

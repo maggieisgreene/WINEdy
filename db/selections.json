@@ -1,22 +1,22 @@
 {
-  "selectionONE": {
-    "combinationID": "combinationONE",
+  "selection1": {
+    "combinationId": "combination1",
     "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
   },
-  "selectionTWO": {
-    "combinationID": "combinationTWO",
+  "selection2": {
+    "combinationId": "combination2",
     "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
   },
-  "selectionTHREE": {
-    "combinationID": "combinationTHREE",
+  "selection3": {
+    "combinationId": "combination3",
     "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
   },
-  "selectionFOUR": {
-    "combinationID": "combinationONE",
+  "selection4": {
+    "combinationId": "combination4",
     "UID": "12345"
   },
-  "selectionFIVE": {
-    "combinationID": "combinationFIVE",
+  "selection5": {
+    "combinationId": "combination5",
     "UID": "NqbToqCxM3bvMpC290sIsoyuzFC3"
   }
 }

@@ -1,21 +1,21 @@
 {
-  "responseONE": {
-    "questionID": "",
+  "response1": {
+    "questionId": "",
     "response": "",
     "UID": ""
   },
-  "responseTWO": {
-    "questionID": "",
+  "response2": {
+    "questionId": "",
     "response": "",
     "UID": ""
   },
-  "responseTHREE": {
-    "questionID": "",
+  "response3": {
+    "questionId": "",
     "response": "",
     "UID": ""
   },
-  "responseFOUR": {
-    "questionID": "",
+  "response4": {
+    "questionId": "",
     "response": "",
     "UID": ""
   }
