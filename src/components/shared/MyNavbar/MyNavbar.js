@@ -27,7 +27,7 @@ class MyNavbar extends React.Component {
               <Link className="nav-link" to="/">Dashboard</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quiz">Quiz</Link>
+              <Link className="nav-link" to="/quiz/question/question1">Quiz</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/selections">Selections</Link>

@@ -60,7 +60,7 @@ class App extends React.Component {
             <PublicRoute path="/auth" exact component={Auth} authed={authed} />
             <PrivateRoute path="/" exact component={Dashboard} authed={authed} />
             <PrivateRoute path="/selections" exact component={Selections} authed={authed} />
-            <PrivateRoute path="/quiz" exact component={Quiz} authed={authed} />
+            <PrivateRoute path="/quiz/question/:questionId" exact component={Quiz} authed={authed} />
           </Switch>
         </Router>
       </div>

@@ -1,11 +1,11 @@
 {
-  "questionONE": {
+  "question1": {
     "question": "Which one do you usually spring for?",
     "candyOneID": "",
     "candyTwoID": "",
     "candyThreeID": ""
   },
-  "questionTWO": {
+  "question2": {
     "question": "Which of the following is your most preferred?",
     "candyOneID": "",
     "candyTwoID": "",
