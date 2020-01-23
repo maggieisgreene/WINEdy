@@ -1,15 +1,15 @@
 import React from 'react';
 
+import authData from '../../../helpers/data/authData';
 import questionData from '../../../helpers/data/questionData';
+import responseData from '../../../helpers/data/responseData';
 
 import './Question.scss';
 
 class Quiz extends React.Component {
   state = {
     question: [],
-    optionOne: '',
-    optionTwo: '',
-    optionThree: '',
+    answer: '',
   }
 
   getQuestions = (questionId) => {
@@ -19,14 +19,14 @@ class Quiz extends React.Component {
   }
 
   nextQuestion = () => {
-    // save results - post to response
+    this.saveResponse();
     const { questionId } = this.props.match.params;
     const nextQuestionId = `question${questionId.split('question')[1] * 1 + 1}`;
     this.props.history.push(`/quiz/question/${nextQuestionId}`);
   }
 
   finishQuiz = () => {
-    // save results - post to response
+    this.saveResponse();
     this.props.history.push('/selections');
   }
 
@@ -42,16 +42,23 @@ class Quiz extends React.Component {
     }
   }
 
-  optionOneChange = (event) => {
-    this.setState({ optionOne: event.target.value });
+  onAnswerChange = (event) => {
+    this.setState({ answer: event.target.value });
   }
 
-  optionTwoChange = (event) => {
-    this.setState({ optionTwo: event.target.value });
-  }
+  saveResponse = () => {
+    const { answer } = this.state;
+    const { questionId } = this.props.match.params;
 
-  optionThreeChange = (event) => {
-    this.setState({ optionThree: event.target.value });
+    const newResponse = {
+      questionId,
+      response: answer.split('-')[1],
+      UID: authData.getUID(),
+    };
+
+    responseData.saveResponse(newResponse)
+      .then()
+      .catch((err) => console.error('Error from save response', err));
   }
 
   render() {
@@ -59,22 +66,21 @@ class Quiz extends React.Component {
     const { questionId } = this.props.match.params;
 
     return (
-      <div className="Quiz">
+      <div className="Question">
         <div className="question-holder">
           <h2>{question.question}</h2>
         </div>
         <div className="answer-holder">
-          <button className="btn btn-light">{question.candyOneId}</button>
           <div className="btn-group btn-group-toggle" data-toggle="buttons">
-            {/* <label className="btn btn-light active">
-              <input type="radio" name="options" id="option1" onChange={this.optionOneChange} value={question.candyOneId} checked={this.state.optionOne === question.candyOneId}>Active</input>
-            </label>
-            <label className="btn btn-light">
-              <input type="radio" name="options" id="option2" onChange={this.optionTwoChange} value={question.candyTwoId} checked={this.state.optionTwo === question.candyTwoId}>Radio</input>
-            </label>
-            <label className="btn btn-light">
-              <input type="radio" name="options" id="option3" onChange={this.optionThreeChange} value={question.candyThreeId} checked={this.state.optionThree === question.candyThreeId}>Radio</input>
-            </label> */}
+            <button className="btn btn-light btn-lg" type="radio" name="optionone" onClick={this.onAnswerChange} value={question.candyOneId} checked={this.state.answer === question.candyOneId}>
+              {question.candyOneId}
+            </button>
+            <button className="btn btn-light btn-lg" type="radio" name="optiontwo" onClick={this.onAnswerChange} value={question.candyTwoId} checked={this.state.answer === question.candyTwoId}>
+              {question.candyTwoId}
+            </button>
+            <button className="btn btn-light btn-lg" type="radio" name="optionthree" onClick={this.onAnswerChange} value={question.candyThreeId} checked={this.state.answer === question.candyThreeId}>
+              {question.candyThreeId}
+            </button>
           </div>
         </div>
 
