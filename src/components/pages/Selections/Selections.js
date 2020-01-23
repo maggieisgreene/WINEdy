@@ -23,7 +23,7 @@ class Selections extends React.Component {
           .then((combinations) => {
             wineData.getWines()
               .then((wines) => {
-                this.setState({ selections, combinations, wines }); // set state for all once
+                this.setState({ selections, combinations, wines });
               });
           });
       })

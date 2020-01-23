@@ -13,14 +13,14 @@
   },
   "question3": {
     "question": "Going to the movies and these are the options?",
-    "candyOneId": "",
-    "candyTwoId": "",
-    "candyThreeId": ""
+    "candyOneId": "Skittles-candy7",
+    "candyTwoId": "Skittles-candy8",
+    "candyThreeId": "Skittles-candy9"
   },
   "question4": {
     "question": "Last but not least, most likely to opt for as dessert?",
-    "candyOneId": "",
-    "candyTwoId": "",
-    "candyThreeId": ""
+    "candyOneId": "Skittles-candy8",
+    "candyTwoId": "Skittles-candy7",
+    "candyThreeId": "Skittles-candy6"
   }
 }
