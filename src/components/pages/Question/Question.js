@@ -9,7 +9,7 @@ import './Question.scss';
 class Question extends React.Component {
   state = {
     question: [],
-    answer: '',
+    answer: {},
   }
 
   getQuestion = (questionId) => {
@@ -18,48 +18,69 @@ class Question extends React.Component {
       .catch((ERR) => console.error('Error from get questions', ERR));
   }
 
-  nextQuestion = () => {
-    const { answer } = this.state;
+  getExistingResponse = (questionId) => {
+    responseData.getResponseForAQuestionByUID(authData.getUID(), questionId)
+      .then((response) => {
+        const initialState = { answer: { response: '' } };
+        if (response) {
+          initialState.answer = response;
+        }
+        this.setState(initialState);
+      })
+      .catch((ERR) => console.error('error from get responses', ERR));
+  }
 
-    if (answer !== '') {
-      this.saveResponse();
-      const { questionId } = this.props.match.params;
-      const nextQuestionId = `question${questionId.split('question')[1] * 1 + 1}`;
-      this.props.history.push(`/quiz/question/${nextQuestionId}`);
-      this.setState({ answer: '' });
+  nextQuestion = () => {
+    if (this.state.answer.id) {
+      this.updateResponse();
     } else {
-      // research alerts in react
-      console.error('what the fuck man');
+      this.saveResponse();
     }
+    const { questionId } = this.props.match.params;
+    const nextQuestionId = `question${questionId.split('question')[1] * 1 + 1}`;
+    this.props.history.push(`/quiz/question/${nextQuestionId}`);
   }
 
   finishQuiz = () => {
-    const { answer } = this.state;
-
-    if (answer !== '') {
-      this.saveResponse();
-      this.props.history.push('/selections');
-      this.setState({ answer: '' });
+    if (this.state.answer.id) {
+      this.updateResponse();
     } else {
-      // research alerts in react
-      console.error('waht the fuuduudsl');
+      this.saveResponse();
     }
+    this.props.history.push('/selections');
   }
 
   componentDidMount() {
     const { questionId } = this.props.match.params;
 
     this.getQuestion(questionId);
+    this.getExistingResponse(questionId);
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.questionId !== prevProps.match.params.questionId) {
       this.getQuestion(this.props.match.params.questionId);
+      this.getExistingResponse(this.props.match.params.questionId);
     }
   }
 
   onAnswerChange = (event) => {
-    this.setState({ answer: event.target.value });
+    const { answer } = this.state;
+    // const { questionId } = this.props.match.params;
+    const updatedAnswer = { ...answer };
+    updatedAnswer.response = event.target.value;
+    this.setState({ answer: updatedAnswer });
+
+    // if (answer !== undefined && answer.id) {
+
+    //   this.setState({
+    //     answer: {
+    //       id: answer.id, questionId, UID: authData.getUID(), response: event.target.value,
+    //     },
+    //   });
+    // } else {
+
+    // }/
   }
 
   saveResponse = () => {
@@ -68,13 +89,28 @@ class Question extends React.Component {
 
     const newResponse = {
       questionId,
-      response: answer.split('-')[1],
+      response: answer.response,
       UID: authData.getUID(),
     };
 
     responseData.saveResponse(newResponse)
       .then()
       .catch((err) => console.error('Error from save response', err));
+  }
+
+  updateResponse = () => {
+    // how do I precheck something
+    const { answer } = this.state;
+
+    const updatedResponse = {
+      questionId: answer.questionId,
+      response: answer.response,
+      UID: answer.UID,
+    };
+
+    responseData.updateResponse(answer.id, updatedResponse)
+      .then()
+      .catch((err) => console.error('Error from update response', err));
   }
 
   render() {

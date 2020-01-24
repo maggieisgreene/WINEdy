@@ -1,26 +1,26 @@
 {
   "question1": {
     "question": "Which one do you usually spring for?",
-    "candyOneId": "Skittles-candy1",
-    "candyTwoId": "Snickers-candy2",
-    "candyThreeId": "Starbursts-candy3"
+    "candyOneId": "candy1",
+    "candyTwoId": "candy2",
+    "candyThreeId": "candy3"
   },
   "question2": {
     "question": "Which of the following is your most preferred?",
-    "candyOneId": "Chocolatey-candy4",
-    "candyTwoId": "Super Sweet-candy5",
-    "candyThreeId": "Sour-candy6"
+    "candyOneId": "candy4",
+    "candyTwoId": "candy5",
+    "candyThreeId": "candy6"
   },
   "question3": {
     "question": "Going to the movies and these are the options?",
-    "candyOneId": "Skittles-candy7",
-    "candyTwoId": "Skittles-candy8",
-    "candyThreeId": "Skittles-candy9"
+    "candyOneId": "candy7",
+    "candyTwoId": "candy8",
+    "candyThreeId": "candy9"
   },
   "question4": {
     "question": "Last but not least, most likely to opt for as dessert?",
-    "candyOneId": "Skittles-candy8",
-    "candyTwoId": "Skittles-candy7",
-    "candyThreeId": "Skittles-candy6"
+    "candyOneId": "candy8",
+    "candyTwoId": "candy7",
+    "candyThreeId": "candy6"
   }
 }
