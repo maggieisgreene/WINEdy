@@ -1,26 +1,26 @@
 {
-  "questionONE": {
+  "question1": {
     "question": "Which one do you usually spring for?",
-    "candyOneID": "",
-    "candyTwoID": "",
-    "candyThreeID": ""
+    "candyOneId": "candy1",
+    "candyTwoId": "candy2",
+    "candyThreeId": "candy3"
   },
-  "questionTWO": {
+  "question2": {
     "question": "Which of the following is your most preferred?",
-    "candyOneID": "",
-    "candyTwoID": "",
-    "candyThreeID": ""
+    "candyOneId": "candy4",
+    "candyTwoId": "candy5",
+    "candyThreeId": "candy6"
   },
-  "questionTHREE": {
+  "question3": {
     "question": "Going to the movies and these are the options?",
-    "candyOneID": "",
-    "candyTwoID": "",
-    "candyThreeID": ""
+    "candyOneId": "candy7",
+    "candyTwoId": "candy8",
+    "candyThreeId": "candy9"
   },
-  "questionFOUR": {
+  "question4": {
     "question": "Last but not least, most likely to opt for as dessert?",
-    "candyOneID": "",
-    "candyTwoID": "",
-    "candyThreeID": ""
+    "candyOneId": "candy8",
+    "candyTwoId": "candy7",
+    "candyThreeId": "candy6"
   }
 }

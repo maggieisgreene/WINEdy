@@ -23,7 +23,7 @@ class Selections extends React.Component {
           .then((combinations) => {
             wineData.getWines()
               .then((wines) => {
-                this.setState({ selections, combinations, wines }); // set state for all once
+                this.setState({ selections, combinations, wines });
               });
           });
       })
@@ -34,8 +34,8 @@ class Selections extends React.Component {
     this.getWinesBySelections();
   }
 
-  deleteSelection = (selectionID) => {
-    selectionData.deleteSelection(selectionID)
+  deleteSelection = (selectionId) => {
+    selectionData.deleteSelection(selectionId)
       .then(() => this.getWinesBySelections())
       .catch((ERR) => console.error('Error from delete selection!', ERR));
   }
@@ -50,7 +50,7 @@ class Selections extends React.Component {
           <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="boards d-flex flex-wrap">
-          {this.state.selections.map((selection) => <Selection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationID)}
+          {this.state.selections.map((selection) => <Selection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationId)}
             selection={selection} wines={wines} deleteSelection={this.deleteSelection} />)}
         </div>
       </div>

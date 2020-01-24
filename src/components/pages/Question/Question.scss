@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.Question {
+  color: whitesmoke;
+}
+
+.question-holder {
+  color: $whiteout;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.answer-holder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .my-btn {
+    display: block;
+    height: 155px;
+    margin: 10px;
+    width: 155px;
+  }
+}
+
+.quiz-body {
+  display: flex;
+}
+
+.quiz-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 20px 15px 0px;
+}
