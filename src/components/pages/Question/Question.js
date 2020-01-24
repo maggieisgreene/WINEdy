@@ -1,8 +1,9 @@
 import React from 'react';
 
 import authData from '../../../helpers/data/authData';
-import questionData from '../../../helpers/data/questionData';
+// import questionData from '../../../helpers/data/questionData';
 import responseData from '../../../helpers/data/responseData';
+import smash from '../../../helpers/data/smash';
 
 import './Question.scss';
 
@@ -13,9 +14,17 @@ class Question extends React.Component {
   }
 
   getQuestion = (questionId) => {
-    questionData.getSingleQuestionByID(questionId)
-      .then((question) => this.setState({ question }))
-      .catch((ERR) => console.error('Error from get questions', ERR));
+    // questionData.getSingleQuestionByID(questionId)
+    //   .then((question) => {
+    //     this.setState({ question });
+    //     smash.getQuestionWithCandys(questionId).then();
+    //   })
+    //   .catch((ERR) => console.error('Error from get questions', ERR));
+    smash.getQuestionWithCandys(questionId)
+      .then((question) => {
+        this.setState({ question });
+      })
+      .catch((error) => console.error('Error from smashing questions and candies', error));
   }
 
   getExistingResponse = (questionId) => {
@@ -66,21 +75,10 @@ class Question extends React.Component {
 
   onAnswerChange = (event) => {
     const { answer } = this.state;
-    // const { questionId } = this.props.match.params;
+
     const updatedAnswer = { ...answer };
     updatedAnswer.response = event.target.value;
     this.setState({ answer: updatedAnswer });
-
-    // if (answer !== undefined && answer.id) {
-
-    //   this.setState({
-    //     answer: {
-    //       id: answer.id, questionId, UID: authData.getUID(), response: event.target.value,
-    //     },
-    //   });
-    // } else {
-
-    // }/
   }
 
   saveResponse = () => {
@@ -99,7 +97,6 @@ class Question extends React.Component {
   }
 
   updateResponse = () => {
-    // how do I precheck something
     const { answer } = this.state;
 
     const updatedResponse = {
