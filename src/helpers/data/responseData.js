@@ -13,7 +13,6 @@ const getResponseForAQuestionByUID = (UID, questionId) => new Promise((resolve, 
         responses.push(responsesOBJ[responseId]);
       });
       const responseForQuestion = responses.find((x) => x.questionId === questionId);
-      console.log(responseForQuestion, 'error from get stuff ');
       resolve(responseForQuestion);
     })
     .catch((error) => reject(error));
