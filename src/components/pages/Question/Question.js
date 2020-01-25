@@ -51,7 +51,7 @@ class Question extends React.Component {
     } else {
       this.saveResponse();
     }
-    this.props.history.push('/selections');
+    this.props.history.push('/recs');
   }
 
   componentDidMount() {
@@ -121,13 +121,13 @@ class Question extends React.Component {
           <div className="answer-holder col-4">
             <div className="btn-group-toggle" data-toggle="buttons">
               <button className="btn btn-light my-btn" type="radio" name="option1" onClick={this.onAnswerChange} value={question.candyOneId} checked={this.state.answer === question.candyOneId}>
-                { question.candys.length && question.candys[0].name }
+                { question.candys.length && question.candys.find((x) => x.id === question.candyOneId).name }
               </button>
               <button className="btn btn-light my-btn" type="radio" name="option2" onClick={this.onAnswerChange} value={question.candyTwoId} checked={this.state.answer === question.candyTwoId}>
-                { question.candys.length && question.candys[1].name}
+                { question.candys.length && question.candys.find((x) => x.id === question.candyTwoId).name}
               </button>
               <button className="btn btn-light my-btn" type="radio" name="option3" onClick={this.onAnswerChange} value={question.candyThreeId} checked={this.state.answer === question.candyThreeId}>
-                { question.candys.length && question.candys[2].name }
+                { question.candys.length && question.candys.find((x) => x.id === question.candyThreeId).name }
               </button>
             </div>
           </div>
