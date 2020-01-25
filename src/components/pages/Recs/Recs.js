@@ -6,6 +6,7 @@ import authData from '../../../helpers/data/authData';
 import responseData from '../../../helpers/data/responseData';
 import combinationData from '../../../helpers/data/combinationData';
 import wineData from '../../../helpers/data/wineData';
+import selectionData from '../../../helpers/data/selectionData';
 
 import './Recs.scss';
 
@@ -32,6 +33,12 @@ class Recs extends React.Component {
     this.getWinesFromResponses();
   }
 
+  saveRecommendationAsSelection = (newSelection) => {
+    selectionData.saveSelection(newSelection)
+      .then(() => this.getWinesFromResponses())
+      .catch((err) => console.error('Error from save selection', err));
+  }
+
   render() {
     const { responses, combinations, wines } = this.state;
 
@@ -42,7 +49,8 @@ class Recs extends React.Component {
           <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="recs-container d-flex flex-wrap">
-        { responses.map((response) => <Recommendation key={response.id} response={response} combination={combinations.find((x) => x.candyId === response.response)} wines={wines} />)}
+        { responses.map((response) => <Recommendation key={response.id} response={response} combination={combinations.find((x) => x.candyId === response.response)}
+          wines={wines} saveRecommendation={this.saveRecommendationAsSelection} />)}
         </div>
       </div>
     );
