@@ -1,7 +1,6 @@
 import React from 'react';
 
 import authData from '../../../helpers/data/authData';
-// import questionData from '../../../helpers/data/questionData';
 import responseData from '../../../helpers/data/responseData';
 import smash from '../../../helpers/data/smash';
 
@@ -9,20 +8,16 @@ import './Question.scss';
 
 class Question extends React.Component {
   state = {
-    question: [],
+    question: {
+      candys: [],
+    },
     answer: {},
   }
 
   getQuestion = (questionId) => {
-    // questionData.getSingleQuestionByID(questionId)
-    //   .then((question) => {
-    //     this.setState({ question });
-    //     smash.getQuestionWithCandys(questionId).then();
-    //   })
-    //   .catch((ERR) => console.error('Error from get questions', ERR));
     smash.getQuestionWithCandys(questionId)
       .then((question) => {
-        this.setState({ question });
+        this.setState({ question, candys: question.candys });
       })
       .catch((error) => console.error('Error from smashing questions and candies', error));
   }
@@ -126,13 +121,13 @@ class Question extends React.Component {
           <div className="answer-holder col-4">
             <div className="btn-group-toggle" data-toggle="buttons">
               <button className="btn btn-light my-btn" type="radio" name="option1" onClick={this.onAnswerChange} value={question.candyOneId} checked={this.state.answer === question.candyOneId}>
-                {question.candyOneId}
+                { question.candys.length && question.candys[0].name }
               </button>
               <button className="btn btn-light my-btn" type="radio" name="option2" onClick={this.onAnswerChange} value={question.candyTwoId} checked={this.state.answer === question.candyTwoId}>
-                {question.candyTwoId}
+                { question.candys.length && question.candys[1].name}
               </button>
               <button className="btn btn-light my-btn" type="radio" name="option3" onClick={this.onAnswerChange} value={question.candyThreeId} checked={this.state.answer === question.candyThreeId}>
-                {question.candyThreeId}
+                { question.candys.length && question.candys[2].name }
               </button>
             </div>
           </div>

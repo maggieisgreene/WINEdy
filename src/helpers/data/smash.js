@@ -16,7 +16,7 @@ const getQuestionWithCandys = (questionId) => new Promise((resolve, reject) => {
         resolve(newQuestion);
       });
     })
-    .catch();
+    .catch((error) => console.error('Error from smash', error));
 });
 
 export default { getQuestionWithCandys };
