@@ -15,6 +15,7 @@ import Auth from '../components/pages/Auth/Auth';
 import Dashboard from '../components/pages/Dashboard/Dashboard';
 import Selections from '../components/pages/Selections/Selections';
 import Question from '../components/pages/Question/Question';
+import Recs from '../components/pages/Recs/Recs';
 
 import './App.scss';
 
@@ -61,6 +62,7 @@ class App extends React.Component {
             <PrivateRoute path="/" exact component={Dashboard} authed={authed} />
             <PrivateRoute path="/selections" exact component={Selections} authed={authed} />
             <PrivateRoute path="/quiz/question/:questionId" exact component={Question} authed={authed} />
+            <PrivateRoute path="/recs" exact component={Recs} authed={authed} />
           </Switch>
         </Router>
       </div>

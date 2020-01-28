@@ -19,4 +19,6 @@ const getSelectionsByUID = (UID) => new Promise((resolve, reject) => {
 
 const deleteSelection = (selectionID) => axios.delete(`${baseURL}/selections/${selectionID}.json`);
 
-export default { getSelectionsByUID, deleteSelection };
+const saveSelection = (newSelection) => axios.post(`${baseURL}/selections.json`, newSelection);
+
+export default { getSelectionsByUID, deleteSelection, saveSelection };
