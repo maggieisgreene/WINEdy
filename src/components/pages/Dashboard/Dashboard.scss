@@ -17,4 +17,9 @@
   color: $main;
   height: 540px;
   padding: 20px;
+
+  .minis {
+    display: flex;
+    justify-content: space-around;
+  }
 }

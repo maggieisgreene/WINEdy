@@ -1,9 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import MiniSelection from '../../shared/MiniSelection/MiniSelection';
+
+import authData from '../../../helpers/data/authData';
+import combinationData from '../../../helpers/data/combinationData';
+import selectionData from '../../../helpers/data/selectionData';
+import wineData from '../../../helpers/data/wineData';
 
 import './Dashboard.scss';
 
 class Dashboard extends React.Component {
+  state = {
+    combinations: [],
+    selections: [],
+    wines: [],
+  }
+
+  getWinesBySelections = () => {
+    selectionData.getSelectionsByUID(authData.getUID())
+      .then((selections) => {
+        combinationData.getCombinations()
+          .then((combinations) => {
+            wineData.getWines()
+              .then((wines) => {
+                this.setState({ selections, combinations, wines });
+              });
+          });
+      })
+      .catch((ERR) => console.error('Error from get selections or combos or wines yee!', ERR));
+  }
+
+  componentDidMount() {
+    this.getWinesBySelections();
+  }
+
   render() {
+    const { combinations, selections, wines } = this.state;
+
+    // need way to grab only two or four selections
+    // const randomSelections = selections[Math.floor(Math.random() * selections.length)];
+
     return (
       <div className="Dashboard">
         <div className="dash-header">
@@ -18,7 +55,11 @@ class Dashboard extends React.Component {
           </div>
           <div className="mini-selections col-6">
             <div className="minis-holder">
-              <h4>A preview of the user's saved wines will go here!</h4>
+              <h4>Your Selections</h4>
+              <div className="minis">
+              { selections.map((selection) => <MiniSelection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />) }
+              </div>
+              <Link className="btn btn-secondary" to="/selections">See All Selections</Link>
             </div>
           </div>
         </div>
