@@ -1,38 +1,50 @@
 {
   "candy1": {
-    "name": "Skittles",
+    "name": "Chocolatey",
     "imageURL": ""
   },
   "candy2": {
-    "name": "Snickers",
+    "name": "Super Sweet",
     "imageURL": ""
   },
   "candy3": {
-    "name": "Reese's",
+    "name": "Sour, is there anything else?",
     "imageURL": ""
   },
   "candy4": {
-    "name": "Starbursts",
+    "name": "Dark Chocolate",
     "imageURL": ""
   },
   "candy5": {
-    "name": "Swedish Fish",
+    "name": "Milk Chocolate",
     "imageURL": ""
   },
   "candy6": {
-    "name": "Dove Dark Chocolate",
+    "name": "White Chocolate",
     "imageURL": ""
   },
   "candy7": {
-    "name": "Sour Gummy Worms",
+    "name": "Gummy Bears",
     "imageURL": ""
   },
   "candy8": {
-    "name": "Twizzlers",
+    "name": "Sour Gummy Worms",
     "imageURL": ""
   },
   "candy9": {
-    "name": "Sour Patch Kids",
+    "name": "Twizzlers",
+    "imageURL": ""
+  },
+  "candy10": {
+    "name": "Reese's Cups",
+    "imageURL": ""
+  },
+  "candy11": {
+    "name": "Sweetarts",
+    "imageURL": ""
+  },
+  "candy12": {
+    "name": "All candy's my favorite!",
     "imageURL": ""
   }
 }
