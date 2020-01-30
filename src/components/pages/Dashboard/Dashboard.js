@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
             <div className="minis-holder">
               <h4>Your Selections</h4>
               <div className="minis">
-              { selections.map((selection) => <MiniSelection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />) }
+              { selections.slice(0, 2).map((selection) => <MiniSelection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />) }
               </div>
               <Link className="btn btn-secondary" to="/selections">See All Selections</Link>
             </div>
