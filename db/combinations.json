@@ -9,18 +9,42 @@
   },
   "combination3": {
     "wineId": "wine3",
-    "candyId": "candy4"
+    "candyId": "candy3"
   },
   "combination4": {
     "wineId": "wine4",
-    "candyId": "candy3"
+    "candyId": "candy4"
   },
   "combination5": {
+    "wineId": "wine5",
+    "candyId": "candy5"
+  },
+  "combination6": {
     "wineId": "wine6",
+    "candyId": "candy6"
+  },
+  "combination7": {
+    "wineId": "wine7",
+    "candyId": "candy7"
+  },
+  "combination8": {
+    "wineId": "wine8",
     "candyId": "candy8"
   },
-  "combinationID": {
-    "wineId": "",
-    "candyId": ""
+  "combination9": {
+    "wineId": "wine9",
+    "candyId": "candy9"
+  },
+  "combination10": {
+    "wineId": "wine10",
+    "candyId": "candy10"
+  },
+  "combination11": {
+    "wineId": "wine11",
+    "candyId": "candy11"
+  },
+  "combination12": {
+    "wineId": "wine12",
+    "candyId": "candy12"
   }
 }
