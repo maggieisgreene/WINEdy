@@ -67,7 +67,7 @@ class Dashboard extends React.Component {
             <div className="weekly-holder">
               <h4>Random wine of the week will go here, hopefully!</h4>
               <div>
-                { (randomCombo) && candys.find((x) => x.id === randomCombo.candyId) }
+                {/* { (randomCombo) && candys.find((x) => x.id === randomCombo.candyId) } */}
                 { (randomCombo) && <p>{randomCombo.candyId}</p> }
                 { (randomCombo) && randomCombo.wineId }
               </div>
