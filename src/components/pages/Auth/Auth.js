@@ -27,12 +27,12 @@ class Auth extends React.Component {
             </ul>
           </div>
         </nav>
-      <div className="auth-display">
+      {/* <div className="auth-display">
         <div className="auth-header">
           <h1>Welcome to WINEDY</h1>
         </div>
         <p>Sign in to get wine recommendations based on your favorite candies!</p>
-      </div>
+      </div> */}
       </div>
     );
   }
