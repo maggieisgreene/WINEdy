@@ -54,6 +54,8 @@ class Dashboard extends React.Component {
       wines,
     } = this.state;
 
+    const random = Math.floor(Math.random() * combinations.length);
+
     return (
       <div className="Dashboard">
         <div className="dash-header">
@@ -64,7 +66,7 @@ class Dashboard extends React.Component {
             <div className="weekly-holder">
               {/* <h4></h4> */}
               <div>
-                { (combinations.length) && combinations.slice(0, 1).map((combination) => <MiniCombo key={combination.id} combination={combination}
+                { (combinations.length) && combinations.slice(random, (random + 1)).map((combination) => <MiniCombo key={combination.id} combination={combination}
                   candy={candys.find((x) => x.id === combination.candyId)} wine={wines.find((x) => x.id === combination.wineId)} />) }
               </div>
             </div>
@@ -81,7 +83,7 @@ class Dashboard extends React.Component {
                   combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />)
                 }
               </div>
-              <Link className="btn btn-secondary" to="/selections">See All Selections</Link>
+              <Link className="btn btn-light" to="/selections">See All Selections</Link>
             </div>
           </div>
         </div>
