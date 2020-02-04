@@ -11,7 +11,7 @@ class MiniSelection extends React.Component {
     return (
       <div className="MiniSelection col-6">
         <div className="mini-card">
-          <img src={foundWine.imageURL} className=" mini-image" alt={selection.name} />
+          <img src={foundWine.imageURL} className="mini-image" alt={selection.name} />
           <div className="">
             <h5 className="">{foundWine.name}</h5>
           </div>

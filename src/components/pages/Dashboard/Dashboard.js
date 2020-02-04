@@ -73,7 +73,7 @@ class Dashboard extends React.Component {
           </div>
           <div className="mini-selections col-6">
             <div className="minis-holder">
-              <h4>Your Selections</h4>
+              <h4 className="mini-selects-header">Your Selections</h4>
               <div className="minis">
                 { (!selections.length) && <h4>You need to take the quiz first!</h4>}
                 { (selections.length === 1)
@@ -83,7 +83,10 @@ class Dashboard extends React.Component {
                   combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />)
                 }
               </div>
-              <Link className="btn btn-light" to="/selections">See All Selections</Link>
+              <div className="spaceholder">
+
+              </div>
+              <Link className="btn btn-outline-secondary" to="/selections">See All Selections</Link>
             </div>
           </div>
         </div>
