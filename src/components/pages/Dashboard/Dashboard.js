@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import MiniCombo from '../../shared/MiniCombo/MiniCombo';
 import MiniSelection from '../../shared/MiniSelection/MiniSelection';
 
 import authData from '../../../helpers/data/authData';
@@ -53,23 +54,18 @@ class Dashboard extends React.Component {
       wines,
     } = this.state;
 
-    const randomCombo = combinations[Math.floor(Math.random() * combinations.length)];
-
-
     return (
       <div className="Dashboard">
         <div className="dash-header">
           <h2>Dashboard</h2>
-          <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="dash-container">
           <div className="wine-of-week col-6">
             <div className="weekly-holder">
-              <h4>Random wine of the week will go here, hopefully!</h4>
+              {/* <h4></h4> */}
               <div>
-                {/* { (randomCombo) && candys.find((x) => x.id === randomCombo.candyId) } */}
-                { (randomCombo) && <p>{randomCombo.candyId}</p> }
-                { (randomCombo) && randomCombo.wineId }
+                { (combinations.length) && combinations.slice(0, 1).map((combination) => <MiniCombo key={combination.id} combination={combination}
+                  candy={candys.find((x) => x.id === combination.candyId)} wine={wines.find((x) => x.id === combination.wineId)} />) }
               </div>
             </div>
           </div>
