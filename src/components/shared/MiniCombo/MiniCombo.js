@@ -9,7 +9,7 @@ class MiniCombo extends React.Component {
 
     return (
       <div className="MiniCombo">
-        <h4>If you like...</h4>
+        <h4>If you prefer...</h4>
         <h5>{candy.name}</h5>
         <h4>We recommend this wine!</h4>
         <img src={wine.imageURL} className="mini-combo" alt={combination.name} />
