@@ -64,7 +64,6 @@ class Dashboard extends React.Component {
         <div className="dash-container">
           <div className="wine-of-week col-6">
             <div className="weekly-holder">
-              {/* <h4></h4> */}
               <div>
                 { (combinations.length) && combinations.slice(random, (random + 1)).map((combination) => <MiniCombo key={combination.id} combination={combination}
                   candy={candys.find((x) => x.id === combination.candyId)} wine={wines.find((x) => x.id === combination.wineId)} />) }
@@ -75,7 +74,7 @@ class Dashboard extends React.Component {
             <div className="minis-holder">
               <h4 className="mini-selects-header">Your Selections</h4>
               <div className="minis">
-                { (!selections.length) && <h4>You need to take the quiz first!</h4>}
+                { (!selections.length) && <h5>You need to take the quiz and save your favorites first!</h5>}
                 { (selections.length === 1)
                   ? selections.slice(0, 1).map((selection) => <MiniSelection key={selection.id}
                   combination={combinations.find((x) => x.id === selection.combinationId)} selection={selection} wines={wines} />)
