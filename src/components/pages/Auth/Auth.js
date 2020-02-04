@@ -15,7 +15,7 @@ class Auth extends React.Component {
     return (
       <div className="Auth">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <h1>WINEDY</h1>
+          <h1 className="auth-main">WINEDY</h1>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -27,9 +27,12 @@ class Auth extends React.Component {
             </ul>
           </div>
         </nav>
-
-        <h1>Welcome to WINEdy</h1>
+      {/* <div className="auth-display">
+        <div className="auth-header">
+          <h1>Welcome to WINEDY</h1>
+        </div>
         <p>Sign in to get wine recommendations based on your favorite candies!</p>
+      </div> */}
       </div>
     );
   }

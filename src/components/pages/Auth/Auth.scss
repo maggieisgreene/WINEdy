@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+.auth-main {
+  color: $pop;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 44px;
+  margin: 0px;
+}
+
+.auth-display {
+  color: $pop;
+
+  // .auth-header {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+}

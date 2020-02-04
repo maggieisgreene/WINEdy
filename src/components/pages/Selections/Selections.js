@@ -47,7 +47,6 @@ class Selections extends React.Component {
       <div className="Selections">
         <div className="selections-header">
           <h2>Your Selections</h2>
-          <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="boards d-flex flex-wrap">
           {this.state.selections.map((selection) => <Selection key={selection.id} combination={combinations.find((x) => x.id === selection.combinationId)}

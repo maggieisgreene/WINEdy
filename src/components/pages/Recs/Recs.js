@@ -46,7 +46,6 @@ class Recs extends React.Component {
       <div className="Recs">
         <div className="recs-header">
           <h2>Recommended For You</h2>
-          <button className="btn btn-light">Take Quiz</button>
         </div>
         <div className="recs-container d-flex flex-wrap">
         { responses.map((response) => <Recommendation key={response.id} response={response} combination={combinations.find((x) => x.candyId === response.response)}
