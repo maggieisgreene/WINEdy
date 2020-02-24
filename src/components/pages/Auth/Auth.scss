@@ -1,6 +1,11 @@
 @import '../../../styles/variables';
 @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
 
+.Auth {
+  background-image: url('https://cdn.unifiedcommerce.com/content/product/large/1058_wine_bottles_1200_rgb.jpg');
+  background-repeat: repeat-x;
+}
+
 .auth-main {
   color: $pop;
   font-family: 'PT Sans', sans-serif;
