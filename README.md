@@ -12,7 +12,11 @@ ReactJS | SASS | JSX | Bootstrap
 
 #### The Quiz
 
-![The Quiz Preview](https://raw.githubusercontent.com/maggieisgreene/shark-attack/master/src/screenshots/sharks%3Aonload.png)
+![The Quiz Preview](https://raw.githubusercontent.com/maggieisgreene/WINEdy/master/src/assets/Winedy-Quiz.png)
+
+#### Recommendations
+
+![Recommendations Preview](https://raw.githubusercontent.com/maggieisgreene/WINEdy/master/src/assets/Winedy-Recs.png)
 
 ## Link To Site
 
